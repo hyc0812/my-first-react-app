@@ -1,7 +1,6 @@
 import React from "react";
 
 function Card(props) {
-    console.log(props);
     return (
         <div className="card">
             <img src={`assets/images/${props.img}`} alt="" className="card--image" />
