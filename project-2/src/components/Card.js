@@ -1,19 +1,18 @@
 import React from "react";
-import card1 from "../images/katie-zaferes.png";
-import star from "../images/star.png";
 
-function Card() {
+function Card(props) {
+    console.log(props);
     return (
         <div className="card">
-            <img src={ card1 } alt="" className="card--image" />
+            <img src={`assets/images/${props.img}`} alt="" className="card--image" />
             <div className="card--stats">
-                <img src={ star } alt="" className="card--star"/>
-                <span>5.0</span>
-                <span>(6) • </span>
-                <span>USA</span>
+                <img src="assets/images/star.png" alt="" className="card--star"/>
+                <span>{ props.rating }</span>
+                <span className="gray">({ props.reviewCount }) • </span>
+                <span className="gray">{ props.country }</span>
             </div>
-            <p>Life Lessons with Katie Zaferes</p>
-            <p>From $136 / person</p>
+            <p>{ props.title }</p>
+            <p><span className="bold">From ${ props.price }</span> / person</p>
         </div>
     )
 }
