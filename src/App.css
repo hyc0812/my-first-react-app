@@ -54,7 +54,7 @@ nav {
   align-items: center;
   background-color: #21222A;
   height: 90px;
-  padding: 30px 25px;
+  padding: 50px 25px;
 }
 
 .nav--logo_text, .nav--title {
@@ -65,15 +65,17 @@ nav {
   margin-right: auto;
   color: #61DAFB;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 30px;
 }
 
 .nav--title {
   color: #DEEBF8;
   font-weight: 600;
+  font-size: 20px;
 }
 
 .nav--icon {
-  height: 100px;
+  height: 60px;
   margin-right: 0px;
+  margin-left: 0px;
 }
