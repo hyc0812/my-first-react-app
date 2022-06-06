@@ -36,3 +36,11 @@ section {
     max-width: 500px;
     align-self: center;
 }
+
+.hero--header {
+    margin-bottom: 16px;
+}
+
+.hero--text {
+    margin-top: 5;
+}
