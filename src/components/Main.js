@@ -5,3 +5,5 @@ export default function Main() {
         <h1>Main component</h1>
     )
 }
+
+// https://scrimba.com/learn/learnreact/main-section-co48340cd80b68fccc25166ce
