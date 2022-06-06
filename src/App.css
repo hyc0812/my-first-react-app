@@ -1,60 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-html,body{
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-}
-
 * {
   box-sizing: border-box;
 }
 
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  height: 100vh;
+  background-color: #282D35;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 nav {
   display: flex;
   align-items: center;
   background-color: #21222A;
   height: 90px;
-  padding: 50px 25px;
+  padding: 30px 25px;
 }
 
 .nav--logo_text, .nav--title {
@@ -65,17 +27,36 @@ nav {
   margin-right: auto;
   color: #61DAFB;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .nav--title {
   color: #DEEBF8;
   font-weight: 600;
-  font-size: 20px;
 }
 
 .nav--icon {
-  height: 60px;
-  margin-right: 0px;
-  margin-left: 0px;
+  height: 45px;
+  margin-right: 10px;
 }
+
+main {
+  padding: 57px 27px;
+  color: white;
+}
+
+.main--title {
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+}
+
+.main--facts {
+  margin-top: 46px;
+}
+
+.main--facts > li {
+  line-height: 19px;
+  padding-block: 10px;
+}
+
