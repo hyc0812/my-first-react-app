@@ -2,13 +2,25 @@ import React from "react";
 import memesData from "../memesData";
 
 function Meme() {
-    //Get a random url. This method is really elegant and important!!
-    const [memeImage, setMemeImage] = React.useState("");
+
+    const [meme, setMeme] = React.useState({
+        topText:"",
+        bottomText:"",
+        randomImage:"http://i.imgflip.com/1bij.jpg"
+    })
+    const [allMemeImage, setAllMemeImage] = React.useState(memesData);
+
     function getMemeImage() {
         const memesArray = memesData.data.memes;
         const radomNumber = Math.floor(Math.random() * memesArray.length);
-        const currentImg = memesArray[radomNumber].url;
-        setMemeImage(currentImg);
+        const url = memesArray[radomNumber].url;
+
+    setMeme(preMeme => {
+        return {
+            ...preMeme,
+            randomImage: url
+        }
+    });
 
     }
     // need to change the form element into div element
@@ -20,7 +32,7 @@ function Meme() {
                 <input type="text" placeholder="Bottom text" className="form--input"/>
                 <button className="form--button" onClick={ getMemeImage }>Get a new meme image 🖼</button>
             </div>
-            <img src={memeImage} className="meme--image" alt=""/>
+            <img src={meme.randomImage} className="meme--image" alt=""/>
         </main>
     )
 }
