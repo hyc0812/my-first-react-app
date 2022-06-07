@@ -110,3 +110,90 @@ export default function App() {
     )
 }
 ```
+
+> Flipping state
+```js
+import React from "react"
+
+export default function App() {
+    const [isGoingOut, setIsGoingOut] = React.useState(true)
+    /**
+     * Challenge: 
+     * - Initialize state for `isGoingOut` as a boolean
+     * - Make it so clicking the div.state--value flips that
+     *   boolean value (true -> false, false -> true)
+     * - Display "Yes" if `isGoingOut` is `true`, "No" otherwise
+     */
+    function changeMind() {
+        setIsGoingOut(prevState => !prevState)
+    }
+    
+    return (
+        <div className="state">
+            <h1 className="state--title">Do I feel like going out tonight?</h1>
+            <div onClick={changeMind} className="state--value">
+                <h1>{isGoingOut ? "Yes" : "No"}</h1>
+            </div>
+        </div>
+    )
+}
+```
+
+> complex state: arrays
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function App() {
+    /**
+     * Challenge: Convert the code below to use an array
+     * held in state instead of a local variable. Initialize 
+     * the state array with the same 2 items below
+     * 
+     * Don't worry about fixing `addItem` quite yet.
+     */
+    const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"])
+    
+    function addItem() {
+        // We'll work on this next
+        setThingsArray(prevThingsArray => {
+            return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
+        })
+    }
+    
+    const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
+    
+    return (
+        <div>
+            <button onClick={addItem}>Add Item</button>
+            {thingsElements}
+        </div>
+    )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+> state array add items
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+function App() {
+    const [array, setArray] = React.useState(["Thing 1", "Thing 2"])
+    function addItem() {
+        setArray(previousArr => {
+            return [...previousArr, `Thing ${previousArr.length +1}`]
+        })
+    }
+    const showArray = array.map(thing => <p key={thing}>{thing}</p>)
+    return (
+        <div>
+            <button onClick={ addItem }>Add Item</button>
+            { showArray }
+        </div>
+    )
+ }
+ReactDOM.render(<App />, document.getElementById('root'));
+```
