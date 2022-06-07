@@ -7,7 +7,7 @@
 
 - Project 2:
 
-<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project-1.png" width="600">
+<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project-2.png" width="600">
 
 - Project 3:
 
