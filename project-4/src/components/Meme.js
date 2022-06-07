@@ -2,12 +2,13 @@ import React from "react";
 import memesData from "../memesData";
 
 export default function Meme() {
-    // Get a random url. This method is really elegant and important!!
+    //Get a random url. This method is really elegant and important!!
+    let urlSelect;
     function getMemeImage() {
        const memesArray = memesData.data.memes;
        const radomNumber = Math.floor(Math.random() * memesArray.length);
-       const url = memesArray[radomNumber].url;
-       console.log(url);
+       urlSelect= memesArray[radomNumber].url;
+       console.log(urlSelect);
     }
     // need to change the form element into div element
     return (
@@ -21,12 +22,4 @@ export default function Meme() {
     )
 }
 
-// "memes": [
-//     {
-//         "id": "181913649",
-//         "name": "Drake Hotline Bling",
-//         "url": "https://i.imgflip.com/30b1gx.jpg",
-//         "width": 1200,
-//         "height": 1200,
-//         "box_count": 2
-//     },
+

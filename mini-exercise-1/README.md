@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+    // const [things, setThings] = React.useState(["Thing 1", "Thing 2"])
+    
+    // function addItem() {
+    //     const newThingText = `Thing ${things.length + 1}`
+    //     setThings(prevState => [...prevState, newThingText])
+    // }
+    
+    // const thingsElements = things.map(thing => <p key={thing}>{thing}</p>)
+    
+    // return (
+    //     <div>
+    //         <button onClick={addItem}>Add Item</button>
+    //         {thingsElements}
+    //     </div>
+    // )
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+    // ___________----------__________----------________-f----------------
 
-In the project directory, you can run:
+// import React from "react"
 
-### `npm start`
+// export default function App() {
+//     const [isImportant, setIsImportant] = React.useState("Yes")
+//     /**
+//      * Challenge: 
+//      * 1. Create a function called `handleClick` that runs
+//      *    setIsImportant("No")
+//      * 2. add a click event listener to the div.state--value
+//      *    that runs `handleClick` when the div is clicked.
+//      */
+    
+//     function handleClick() {
+//         if (isImportant === "No") {
+//             setIsImportant("Yes")
+//         } else if (isImportant === "Yes") {
+//             setIsImportant("No")
+//         }
+//     }
+    
+//     return (
+//         <div className="state">
+//             <h1 className="state--title" onClick={ handleClick }>Is state important to know?</h1>
+//             <div className="state--value">
+//                 <h1 onClick={ handleClick }>{isImportant}</h1>
+//             </div>
+//         </div>
+//     )
+// }
+// ------------------------------------------------------------\'
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+// import React from "react"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+// export default function App() {
+//     const [count, setCount] = React.useState(0)
+    
+//     function add() {
+//         setCount(count + 1)
+//     }
+    
+//     function subtract() {
+//         setCount(count - 1)
+//     }
+    
+//     return (
+//         <div className="counter">
+//             <button className="counter--minus" onClick={subtract}>–</button>
+//             <div className="counter--count">
+//                 <h1>{count}</h1>
+//             </div>
+//             <button className="counter--plus" onClick={add}>+</button>
+//         </div>
+//     )
+// }
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+```js
+> useState
+import React from "react"
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default function App() {
+    const [count, setCount] = React.useState(0)
+    /**
+     * Note: if you ever need the old value of state
+     * to help you determine the new value of state,
+     * you should pass a callback function to your
+     * state setter function instead of using
+     * state directly. This callback function will
+     * receive the old value of state as its parameter,
+     * which you can then use to determine your new
+     * value of state.
+     */
+    function add() {
+        setCount(prevCount => prevCount + 1)
+    }
+    // Challenge: update `substract` to use a callback function
+    
+    function subtract() {
+        setCount(prevCount => prevCount - 1)
+    }
+    
+    return (
+        <div className="counter">
+            <button className="counter--minus" onClick={subtract}>–</button>
+            <div className="counter--count">
+                <h1>{count}</h1>
+            </div>
+            <button className="counter--plus" onClick={add}>+</button>
+        </div>
+    )
+}
+```
