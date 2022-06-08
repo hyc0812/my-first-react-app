@@ -7,7 +7,7 @@ function App() {
   const [squares, setSquares] = React.useState(boxes);
   // Map
   const squareElements = squares.map(square => (
-    <div className='box' key={square.id}>{square.on}</div>
+    <div className='box' key={square.id}>{square.id}</div>
   ))
   console.log(squareElements[0])
   return (
