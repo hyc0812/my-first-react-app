@@ -1,5 +1,11 @@
 ## Screen shot for the projects:
 
+How to use? at each project root directory:
+```linux
+npm install
+npm start
+```
+
 - Mini project 1:
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_1.png" width="600">
 
