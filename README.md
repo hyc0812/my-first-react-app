@@ -1,5 +1,14 @@
 ## Screen shot for the projects:
 
+- Mini project 1:
+<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_1.png" width="600">
+
+- Mini project 2:
+<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_2.png" width="600">
+
+
+
+
 - Project 1:
 
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project-1.png" width="600">
