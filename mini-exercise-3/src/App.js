@@ -8,6 +8,7 @@ function App() {
   const [squares, setSquares] = React.useState(boxes);
   // Map the state array
 
+  // toggle the square
   function toggle (id) {
     console.log(id);
     setSquares(preSquares => {
@@ -27,6 +28,8 @@ function App() {
       return newSquares;
     })
   }
+
+  // mapping the squares
   const squareElements = squares.map(square => (
     <Box 
     key={square.id}
@@ -36,6 +39,7 @@ function App() {
     />
   ))
 
+  // render
   return (
     <main>
       {squareElements}
