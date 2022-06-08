@@ -10,6 +10,18 @@ function App() {
 
   // toggle the square
   function toggle (id) {
+    // show the square id that was clicked
+    console.log(id);
+    setSquares(prevSquares => {
+      return prevSquares.map(square => {
+        return square.id === id ? {...square, on:!square.on} : square
+      });
+    });
+  }
+
+  // Alternatively, we can also use toggle2 to solve the toggle problem
+  // This method is not as smart as toggle()...
+  function toggle2 (id){
     console.log(id);
     setSquares(preSquares => {
       const newSquares = [];
@@ -29,13 +41,14 @@ function App() {
     })
   }
 
+
   // mapping the squares
   const squareElements = squares.map(square => (
     <Box 
     key={square.id}
     id={square.id} 
     on={square.on}
-    toggle={ toggle }
+    toggle={ toggle } // can change the two function here (toggle() or toggle2())
     />
   ))
 
