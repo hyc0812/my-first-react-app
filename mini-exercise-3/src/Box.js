@@ -1,8 +1,11 @@
 import React from "react";
 
 export default function Box(props) {
-    console.log(props.on)
+
+    const styles = {
+        backgroundColor: props.on ? "#222222" : "#cccccc"
+    }
     return (
-        <div className='box'></div>
+        <div className='box' style={ styles } onClick={ () => props.toggle(props.id) }></div>
     )
 }
