@@ -5,7 +5,6 @@ export default function Joke(props) {
     const [isShown, setIsShown] = React.useState(false);
 
     function toggle() {
-        console.log(isShown)
         setIsShown(
             preState => !preState
         )
@@ -15,7 +14,7 @@ export default function Joke(props) {
         <div className="main--joker">
             {props.setup && <h3>Setup: {props.setup}</h3>}
             {isShown && <p>Punchline: {props.punchline}</p>}
-            <button onClick={ toggle }> Show Punchline </button>
+            <button onClick={ toggle }> {isShown ? "Hide" : "Show"} Punchline </button>
             <hr />
         </div>
     )
