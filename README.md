@@ -7,12 +7,18 @@ npm start
 ```
 
 - Mini project 1:
+
+> shadow
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_1.png" width="600">
 
 - Mini project 2:
+
+> increasing and decreasing the number
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_2.png" width="600">
 
 - Mini project 3:
+
+> toggle game
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_3.png" width="600">
 
 
