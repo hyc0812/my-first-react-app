@@ -1,6 +1,7 @@
 import React from "react"
 import Joke from "./Joke"
 import jokesData from "./jokesData"
+import Unread from "./Unread"
 
 export default function App() {
     const jokeElements = jokesData.map(joke => {
@@ -13,6 +14,8 @@ export default function App() {
     return (
         <div className="main">
             {jokeElements}
+
+            <Unread />
         </div>
     )
 }
