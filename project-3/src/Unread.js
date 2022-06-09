@@ -1,17 +1,16 @@
 import React from "react"
 
 export default function Unread() {
-    const [messages, setMessages] = React.useState(["hello"])
+    const [messages, setMessages] = React.useState(["a", "b", "c", "d"])
 
-    function displayMessages(messages) {
-        messages.length === 0 ?
-        <h1>You are all caught up!</h1> :
-        <h1>You have {messages.length} unread messages</h1>
-    } 
     console.log(messages)
     return (
         <div>
-            {displayMessages}
+            {
+                messages.length === 0 ?
+                <h1>You are all caught up!</h1> :
+                <h1>you have {messages.length} unread message{messages.length > 1 && "s"}</h1>
+            }
         </div>
     )
 }
