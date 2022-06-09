@@ -1,23 +1,44 @@
 import React from "react";
 
 export default function Form() {
-    const [firstName, setFirstName] = React.useState("");
+    const [formData, setFormData] = React.useState(
+        {firstName:"", lastName:"", email:""}
+    );
+    
+    console.log(formData)
+
+    
     function handleChange(event) {
-        console.log(event.target.value)
-        setFirstName(currentFirstName => {
-            return event.target.value
+        setFormData(preFormData => {
+            return {
+                ...preFormData,
+                [event.target.name]:event.target.value
+            }
         })
     };
+
     return (
         <div>
             <form>
                 <input 
                 type="text"
-                placeholder="FirstName"
+                placeholder="First Name"
                 onChange={ handleChange}
+                name="firstName"
+                />
+                <input
+                type="text"
+                placeholder="Last Name"
+                onChange={ handleChange }
+                name="lastName"
+                />
+                <input
+                type="text"
+                placeholder="Email"
+                onChange={ handleChange }
+                name="email"
                 />
             </form>
-            <h1>{ firstName }</h1>
         </div>
     );
 }
