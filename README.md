@@ -21,6 +21,15 @@ npm start
 > toggle game
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_3.png" width="600">
 
+- Mini project 4:
+
+> Form practice
+<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_4.png" width="600">
+
+- Mini project 5:
+
+> Sign up form
+<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_5.png" width="600">
 
 
 - Project 1:
