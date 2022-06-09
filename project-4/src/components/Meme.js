@@ -15,24 +15,56 @@ function Meme() {
         const radomNumber = Math.floor(Math.random() * memesArray.length);
         const url = memesArray[radomNumber].url;
 
-    setMeme(preMeme => {
-        return {
-            ...preMeme,
-            randomImage: url
-        }
-    });
-
+        setMeme(preMeme => {
+            return {
+                ...preMeme,
+                randomImage: url
+            }
+        });
     }
     // need to change the form element into div element
+
+    function handleChange(event) {
+        const { name, value, type, checked } = event.target;
+        // setFormData(preFormData => {
+        //     return {
+        //     ...preFormData,
+        //     [name]: type === "checkbox" ? checked : value
+        // }
+      })
+    }
 
     return (
         <main>
             <div className="form">
-                <input type="text" placeholder="Top text" className="form--input"/>
-                <input type="text" placeholder="Bottom text" className="form--input"/>
-                <button className="form--button" onClick={ getMemeImage }>Get a new meme image 🖼</button>
+                <input 
+                    type="text" 
+                    placeholder="Top text" 
+                    className="form--input"
+                    name="topText"
+                    onChange={ handleChange }
+                    value={ meme.topText }
+                />
+                <input 
+                    type="text" 
+                    placeholder="Bottom text" 
+                    className="form--input"
+                    name="bottomText"
+                    onChange={ handleChange }
+                    value={ meme.bottomText }
+                />
+                <button 
+                    className="form--button" 
+                    onClick={ getMemeImage }
+                    >
+                        Get a new meme image 🖼
+                </button>
             </div>
-            <img src={meme.randomImage} className="meme--image" alt=""/>
+            <div className="meme">
+                <img src={meme.randomImage} className="meme--image" />
+                <h2 className="meme--text top">One does not simply</h2>
+                <h2 className="meme--text bottom">Walk into Mordor</h2>
+            </div>
         </main>
     )
 }
