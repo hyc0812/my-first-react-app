@@ -13,7 +13,7 @@ export default function App() {
      * 3. When the user clicks "Sign up", check if the 
      *    password & confirmation match each other. If
      *    so, log "Successfully signed up" to the console.
-     *    If not, log "passwords to not match" to the console.
+     *    If not, log "passwords do not match" to the console.
      * 4. Also when submitting the form, if the person checked
      *    the "newsletter" checkbox, log "Thanks for signing
      *    up for our newsletter!" to the console.
