@@ -56,6 +56,7 @@ export default function App() {
     
     return (
         <div className="form-container">
+          <h3>Fill in sign up form</h3>
             <form className="form" onSubmit={handleSubmit}>
                 <input 
                     type="email" 
