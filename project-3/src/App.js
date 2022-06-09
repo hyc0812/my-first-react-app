@@ -2,6 +2,7 @@ import React from "react"
 import Joke from "./Joke"
 import jokesData from "./jokesData"
 import Unread from "./Unread"
+import Form from "./Form"
 
 export default function App() {
     const jokeElements = jokesData.map(joke => {
@@ -16,6 +17,8 @@ export default function App() {
             {jokeElements}
 
             <Unread />
+            <hr/>
+            <Form />
         </div>
     )
 }
