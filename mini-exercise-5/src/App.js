@@ -41,7 +41,17 @@ export default function App() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(formData);
+      if (formData.password===formData.confirmPassword) {
+        if (formData.okayToEmail) {
+          console.log("Successfully signed up");
+          console.log("Thanks for signing up for our newsletter");
+        } else {
+          console.log("Successfully signed up");
+        }
+        event.preventDefault();
+      } else {
+        console.log("Passwords do not match! Try again");
+      }
     }
     
     return (
