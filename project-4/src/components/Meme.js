@@ -1,4 +1,5 @@
 import React from "react";
+// import memesData from "../memesData"; // no need to import the data anymore
 
 function Meme() {
 
