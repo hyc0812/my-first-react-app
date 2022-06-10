@@ -31,6 +31,11 @@ npm start
 > Sign up form
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_5.png" width="600">
 
+- Mini project 6:
+
+> Sign up form
+<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_6.png" width="600">
+
 
 - Project 1:
 
