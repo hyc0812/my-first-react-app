@@ -14,17 +14,21 @@ function Meme() {
         const memesArray = memesData.data.memes;
         const radomNumber = Math.floor(Math.random() * memesArray.length);
         const url = memesArray[radomNumber].url;
-        return url;
+        setMeme(preMeme => {
+            return {
+                ...preMeme,
+                randomImage: url
+            }
+        });
     }
-        // setMeme(preMeme => {
-        //     return {
-        //         ...preMeme,
-        //         randomImage: url,
-        //         [name]: value
-        //     }
-        // });
 
-    // need to change the form element into div element
+    function handleChange(event) {
+        const {name, value} = event.target
+        setMeme(preMeme => ({
+            ...preMeme,
+            [name] : value
+        }))
+    }
 
     return (
         <main>
@@ -47,15 +51,15 @@ function Meme() {
                 />
                 <button 
                     className="form--button" 
-                    onClick={ handleChange }
+                    onClick={ getMemeImage }
                     >
                         Get a new meme image 🖼
                 </button>
             </div>
             <div className="meme">
                 <img src={meme.randomImage} className="meme--image" alt=""/>
-                <h2 className="meme--text top">One does not simply</h2>
-                <h2 className="meme--text bottom">Walk into Mordor</h2>
+                <h2 className="meme--text top">{ meme.topText }</h2>
+                <h2 className="meme--text bottom">{ meme.bottomText }</h2>
             </div>
         </main>
     )
