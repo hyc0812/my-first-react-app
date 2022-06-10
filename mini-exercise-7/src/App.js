@@ -16,7 +16,10 @@ export default function App() {
           <button onClick={toggle}>
               Toggle WindowTracker
           </button>
-          {show && <WindowTracker />}
+          {show && <WindowTracker />} 
       </div>
   )
 }
+
+// {show && <WindowTracker />} 
+// excellent use !!!
