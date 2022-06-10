@@ -8,6 +8,9 @@ function Meme() {
         bottomText:"",
         randomImage:"http://i.imgflip.com/1bij.jpg"
     })
+
+    const [allMeme, setAllMeme] = React.useState([])
+
     const [allMemeImage, setAllMemeImage] = React.useState(memesData);
 
     function getMemeImage() {
@@ -29,6 +32,13 @@ function Meme() {
             [name] : value
         }))
     }
+
+    React.useEffect(() => {
+        console.log(allMeme);
+        fetch("https://api.imgflip.com/get_memes")      // make request to this URL
+            .then(res => res.json())                    // Parse JSON into javascript
+            .then(data => setAllMeme(data.data.memes))  // send specified data to some place
+    },[])
 
     return (
         <main>
@@ -61,10 +71,10 @@ function Meme() {
                 <h2 className="meme--text top">{ meme.topText }</h2>
                 <h2 className="meme--text bottom">{ meme.bottomText }</h2>
             </div>
+            <pre>{JSON.stringify(allMeme, null, 2)}</pre>
         </main>
     )
 }
-
 
 export default Meme;
 
