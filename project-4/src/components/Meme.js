@@ -1,5 +1,4 @@
 import React from "react";
-import memesData from "../memesData";
 
 function Meme() {
 
@@ -11,12 +10,17 @@ function Meme() {
 
     const [allMeme, setAllMeme] = React.useState([])
 
-    const [allMemeImage, setAllMemeImage] = React.useState(memesData);
+    React.useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")      // make request to this URL
+            .then(res => res.json())                    // Parse JSON into javascript
+            .then(data => setAllMeme(data.data.memes))  // send specified data to some place
+    },[allMeme])
+
+    // const [allMemeImage, setAllMemeImage] = React.useState(memesData);
 
     function getMemeImage() {
-        const memesArray = memesData.data.memes;
-        const radomNumber = Math.floor(Math.random() * memesArray.length);
-        const url = memesArray[radomNumber].url;
+        const radomNumber = Math.floor(Math.random() * allMeme.length);
+        const url = allMeme[radomNumber].url;
         setMeme(preMeme => {
             return {
                 ...preMeme,
@@ -32,13 +36,6 @@ function Meme() {
             [name] : value
         }))
     }
-
-    React.useEffect(() => {
-        console.log(allMeme);
-        fetch("https://api.imgflip.com/get_memes")      // make request to this URL
-            .then(res => res.json())                    // Parse JSON into javascript
-            .then(data => setAllMeme(data.data.memes))  // send specified data to some place
-    },[])
 
     return (
         <main>
@@ -71,7 +68,6 @@ function Meme() {
                 <h2 className="meme--text top">{ meme.topText }</h2>
                 <h2 className="meme--text bottom">{ meme.bottomText }</h2>
             </div>
-            <pre>{JSON.stringify(allMeme, null, 2)}</pre>
         </main>
     )
 }
