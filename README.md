@@ -33,7 +33,7 @@ npm start
 
 - Mini project 6:
 
-> Sign up form
+> have access to online JSON database
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_6.png" width="600">
 
 
