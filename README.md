@@ -36,6 +36,11 @@ npm start
 > have access to online JSON database
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_6.png" width="600">
 
+- Mini project 7:
+
+> Display window width
+<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/mini_7.png" width="600">
+
 
 - Project 1:
 
