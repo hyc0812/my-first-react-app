@@ -3,8 +3,7 @@ import './App.css';
 import React from "react";
 import Die from './Die';
 import {nanoid} from "nanoid";
-// import useWindowSize from 'react-use/lib/useWindowSize'
-import Confetti from 'react-confetti'
+import Confetti from 'react-confetti';
 
 
 function App() {
