@@ -60,5 +60,6 @@ npm start
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_4.png" width="600">
 
 - Project 5:
+> Add light mode dark mode hook
 
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_5.png" width="600">
