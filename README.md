@@ -69,3 +69,10 @@ npm start
 > NoteBoard with MarkDown features
 
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_6.png" width="600">
+
+
+- Project 7:
+> Fun game Tenzies with winning effect package confetti
+
+<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_7_1.png" width="600">
+<img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_7_2.png" width="600">
