@@ -76,3 +76,22 @@ npm start
 
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_7_1.png" width="600">
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_7_2.png" width="600">
+
+--- 
+MEMO for deploy on git (after pushing):
+```linux
+npm install gh-pages (--save) (-dev) (--force)
+```
+
+Add the following to first line of package.json:
+ `"homepage": "http://hyc0812.github.io/deploy-react-simple-notes",`
+ 
+Add the following in "scripts":
+
+`"predeploy":"npm run build",`
+`"deploy":"gh-pages -d build",`
+
+Finally run:
+```linux
+npm run deploy
+```
