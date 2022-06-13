@@ -65,13 +65,13 @@ npm start
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_5.png" width="600">
 
 
-- Project 6:
+- Project 6: [Demo Page](http://hyc0812.github.io/deploy-react-simple-notes)
 > NoteBoard with MarkDown features
 
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_6.png" width="600">
 
 
-- Project 7: [LINK](https://hyc0812.github.io/deploy-react-project7-tenzies/)
+- Project 7: [Demo Page](https://hyc0812.github.io/deploy-react-project7-tenzies/)
 > Fun game Tenzies with winning effect package confetti
 
 <img src="https://github.com/hyc0812/my-first-react-app/blob/master/screenshots/project_7_1.png" width="600">
