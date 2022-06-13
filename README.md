@@ -84,7 +84,10 @@ npm install gh-pages (--save) (-dev) (--force)
 ```
 
 Add the following to first line of package.json:
- `"homepage": "http://hyc0812.github.io/deploy-react-simple-notes",`
+
+"homepage": "http://GITUSERNAME.github.io/REPOSITORYNAME",
+
+e.g. `"homepage": "http://hyc0812.github.io/deploy-react-simple-notes",`
  
 Add the following in "scripts":
 
